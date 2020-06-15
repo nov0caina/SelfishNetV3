@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelfishNetv0", "SelfishNetv0\SelfishNetv0.csproj", "{299D869A-3E55-459A-BEF9-20188B8419E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSArp", "C:\Users\User\Downloads\Compressed\CSArp-Netcut-master\CSArp-Netcut-master\CSArp\CSArp.csproj", "{8FB487C8-306D-4476-8C6B-4D3DDF1853A4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{299D869A-3E55-459A-BEF9-20188B8419E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{299D869A-3E55-459A-BEF9-20188B8419E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{299D869A-3E55-459A-BEF9-20188B8419E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{299D869A-3E55-459A-BEF9-20188B8419E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FB487C8-306D-4476-8C6B-4D3DDF1853A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FB487C8-306D-4476-8C6B-4D3DDF1853A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FB487C8-306D-4476-8C6B-4D3DDF1853A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FB487C8-306D-4476-8C6B-4D3DDF1853A4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3A100C38-FE15-47A7-854B-08AED3C4B363}
+	EndGlobalSection
+EndGlobal
