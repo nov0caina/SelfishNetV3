@@ -31,7 +31,7 @@ namespace SelfishNetv0
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            AdvancedDataGridView.TreeGridNode treeGridNode2 = new AdvancedDataGridView.TreeGridNode();
+            AdvancedDataGridView.TreeGridNode treeGridNode1 = new AdvancedDataGridView.TreeGridNode();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ArpForm));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
@@ -86,7 +86,7 @@ namespace SelfishNetv0
             this.toolStripSeparator3});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(756, 39);
+            this.toolStrip1.Size = new System.Drawing.Size(685, 39);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -161,15 +161,15 @@ namespace SelfishNetv0
             this.treeGridView1.ImageList = this.imageList1;
             this.treeGridView1.Location = new System.Drawing.Point(0, 39);
             this.treeGridView1.Name = "treeGridView1";
-            treeGridNode2.Height = 20;
-            treeGridNode2.ImageIndex = 0;
-            this.treeGridView1.Nodes.Add(treeGridNode2);
+            treeGridNode1.Height = 20;
+            treeGridNode1.ImageIndex = 0;
+            this.treeGridView1.Nodes.Add(treeGridNode1);
             this.treeGridView1.RowHeadersVisible = false;
             this.treeGridView1.ShowCellErrors = false;
             this.treeGridView1.ShowCellToolTips = false;
             this.treeGridView1.ShowEditingIcon = false;
             this.treeGridView1.ShowRowErrors = false;
-            this.treeGridView1.Size = new System.Drawing.Size(756, 411);
+            this.treeGridView1.Size = new System.Drawing.Size(685, 525);
             this.treeGridView1.TabIndex = 1;
             this.treeGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.TreeGridView1_CellValueChanged);
             this.treeGridView1.CurrentCellDirtyStateChanged += new System.EventHandler(this.TreeGridView1_CurrentCellDirtyStateChanged);
@@ -405,7 +405,7 @@ namespace SelfishNetv0
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(756, 450);
+            this.ClientSize = new System.Drawing.Size(685, 564);
             this.ControlBox = false;
             this.Controls.Add(this.treeGridView1);
             this.Controls.Add(this.toolStrip1);

@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Button btnRegistrarProveedor;
             System.Windows.Forms.Button btnPanelProv_Ver;
-            System.Windows.Forms.Button btnWebPage;
             System.Windows.Forms.Button btnAbout;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main));
             this.panelBarraTitulo = new System.Windows.Forms.Panel();
@@ -57,7 +56,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             btnRegistrarProveedor = new System.Windows.Forms.Button();
             btnPanelProv_Ver = new System.Windows.Forms.Button();
-            btnWebPage = new System.Windows.Forms.Button();
             btnAbout = new System.Windows.Forms.Button();
             this.panelBarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureICONO)).BeginInit();
@@ -116,28 +114,6 @@
             btnPanelProv_Ver.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             btnPanelProv_Ver.UseVisualStyleBackColor = true;
             // 
-            // btnWebPage
-            // 
-            btnWebPage.Dock = System.Windows.Forms.DockStyle.Top;
-            btnWebPage.FlatAppearance.BorderSize = 0;
-            btnWebPage.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            btnWebPage.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(148)))), ((int)(((byte)(67)))));
-            btnWebPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btnWebPage.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            btnWebPage.ForeColor = System.Drawing.Color.Gainsboro;
-            btnWebPage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btnWebPage.Location = new System.Drawing.Point(0, 0);
-            btnWebPage.Margin = new System.Windows.Forms.Padding(2);
-            btnWebPage.Name = "btnWebPage";
-            btnWebPage.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            btnWebPage.Size = new System.Drawing.Size(188, 42);
-            btnWebPage.TabIndex = 2;
-            btnWebPage.Text = "Web Page";
-            btnWebPage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btnWebPage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            btnWebPage.UseVisualStyleBackColor = true;
-            btnWebPage.Click += new System.EventHandler(this.btnWebPage_Click);
-            // 
             // btnAbout
             // 
             btnAbout.Dock = System.Windows.Forms.DockStyle.Top;
@@ -148,7 +124,7 @@
             btnAbout.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             btnAbout.ForeColor = System.Drawing.Color.Gainsboro;
             btnAbout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btnAbout.Location = new System.Drawing.Point(0, 42);
+            btnAbout.Location = new System.Drawing.Point(0, 0);
             btnAbout.Margin = new System.Windows.Forms.Padding(2);
             btnAbout.Name = "btnAbout";
             btnAbout.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
@@ -173,7 +149,7 @@
             this.panelBarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.panelBarraTitulo.Margin = new System.Windows.Forms.Padding(2);
             this.panelBarraTitulo.Name = "panelBarraTitulo";
-            this.panelBarraTitulo.Size = new System.Drawing.Size(1080, 32);
+            this.panelBarraTitulo.Size = new System.Drawing.Size(872, 32);
             this.panelBarraTitulo.TabIndex = 0;
             this.panelBarraTitulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelBarraTitulo_MouseMove);
             // 
@@ -204,7 +180,7 @@
             this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("btnRestaurar.Image")));
-            this.btnRestaurar.Location = new System.Drawing.Point(1042, 9);
+            this.btnRestaurar.Location = new System.Drawing.Point(834, 9);
             this.btnRestaurar.Margin = new System.Windows.Forms.Padding(2);
             this.btnRestaurar.Name = "btnRestaurar";
             this.btnRestaurar.Size = new System.Drawing.Size(12, 13);
@@ -219,7 +195,7 @@
             this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
-            this.btnMinimizar.Location = new System.Drawing.Point(1026, 9);
+            this.btnMinimizar.Location = new System.Drawing.Point(818, 9);
             this.btnMinimizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(12, 13);
@@ -233,7 +209,7 @@
             this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMaximizar.Image")));
-            this.btnMaximizar.Location = new System.Drawing.Point(1042, 9);
+            this.btnMaximizar.Location = new System.Drawing.Point(834, 9);
             this.btnMaximizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnMaximizar.Name = "btnMaximizar";
             this.btnMaximizar.Size = new System.Drawing.Size(12, 13);
@@ -247,7 +223,7 @@
             this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.Location = new System.Drawing.Point(1058, 9);
+            this.btnCerrar.Location = new System.Drawing.Point(850, 9);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(12, 13);
@@ -278,11 +254,11 @@
             // titulo
             // 
             this.titulo.AutoSize = true;
-            this.titulo.Font = new System.Drawing.Font("Computerfont", 71.99999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titulo.Font = new System.Drawing.Font("Computerfont", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titulo.ForeColor = System.Drawing.SystemColors.Control;
-            this.titulo.Location = new System.Drawing.Point(165, 398);
+            this.titulo.Location = new System.Drawing.Point(125, 393);
             this.titulo.Name = "titulo";
-            this.titulo.Size = new System.Drawing.Size(582, 122);
+            this.titulo.Size = new System.Drawing.Size(388, 81);
             this.titulo.TabIndex = 2;
             this.titulo.Text = "SelfishNet v3";
             // 
@@ -294,7 +270,7 @@
             this.panelBottomStrip.Location = new System.Drawing.Point(0, 566);
             this.panelBottomStrip.Margin = new System.Windows.Forms.Padding(2);
             this.panelBottomStrip.Name = "panelBottomStrip";
-            this.panelBottomStrip.Size = new System.Drawing.Size(892, 32);
+            this.panelBottomStrip.Size = new System.Drawing.Size(684, 32);
             this.panelBottomStrip.TabIndex = 1;
             // 
             // label1
@@ -318,7 +294,7 @@
             this.panelContenedor.Location = new System.Drawing.Point(0, 0);
             this.panelContenedor.Margin = new System.Windows.Forms.Padding(2);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1080, 630);
+            this.panelContenedor.Size = new System.Drawing.Size(872, 630);
             this.panelContenedor.TabIndex = 1;
             // 
             // panelformularios
@@ -331,14 +307,14 @@
             this.panelformularios.Location = new System.Drawing.Point(0, 32);
             this.panelformularios.Margin = new System.Windows.Forms.Padding(2);
             this.panelformularios.Name = "panelformularios";
-            this.panelformularios.Size = new System.Drawing.Size(892, 598);
+            this.panelformularios.Size = new System.Drawing.Size(684, 598);
             this.panelformularios.TabIndex = 2;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = global::SelfishNetv0.Properties.Resources.fridaynight;
-            this.pictureBox1.Location = new System.Drawing.Point(278, 87);
+            this.pictureBox1.Location = new System.Drawing.Point(174, 72);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(314, 308);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -356,7 +332,7 @@
             this.panelMenu.Controls.Add(this.btnARP);
             this.panelMenu.Controls.Add(this.panelInfo);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelMenu.Location = new System.Drawing.Point(892, 32);
+            this.panelMenu.Location = new System.Drawing.Point(684, 32);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(2);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(188, 598);
@@ -366,11 +342,10 @@
             // 
             this.panelSubMenuInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(210)))), ((int)(((byte)(84)))));
             this.panelSubMenuInfo.Controls.Add(btnAbout);
-            this.panelSubMenuInfo.Controls.Add(btnWebPage);
             this.panelSubMenuInfo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSubMenuInfo.Location = new System.Drawing.Point(0, 302);
             this.panelSubMenuInfo.Name = "panelSubMenuInfo";
-            this.panelSubMenuInfo.Size = new System.Drawing.Size(188, 84);
+            this.panelSubMenuInfo.Size = new System.Drawing.Size(188, 42);
             this.panelSubMenuInfo.TabIndex = 15;
             // 
             // btnInfo
@@ -440,7 +415,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1080, 630);
+            this.ClientSize = new System.Drawing.Size(872, 630);
             this.Controls.Add(this.panelContenedor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "main";
