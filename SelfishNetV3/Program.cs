@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
-namespace SelfishNetv0
+namespace SelfishNetv3
 {
     static class Program
     {

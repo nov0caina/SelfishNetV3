@@ -3,7 +3,7 @@ using System.Collections;
 using System.Runtime.InteropServices;
 using System.Threading;
 
-namespace SelfishNetv0
+namespace SelfishNetv3
 {
 #pragma warning disable CS1591 // Falta el comentario XML para el tipo o miembro visible públicamente
     public class PcList : IDisposable

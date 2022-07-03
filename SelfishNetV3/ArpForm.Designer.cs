@@ -1,6 +1,6 @@
 ﻿using AdvancedDataGridView;
 
-namespace SelfishNetv0
+namespace SelfishNetv3
 {
     partial class ArpForm
     {
@@ -93,7 +93,7 @@ namespace SelfishNetv0
             // toolStripButton1
             // 
             this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = global::SelfishNetv0.Properties.Resources.Network_Map;
+            this.toolStripButton1.Image = global::SelfishNetv3.Properties.Resources.Network_Map;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(36, 36);
@@ -108,7 +108,7 @@ namespace SelfishNetv0
             // toolStripButton2
             // 
             this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = global::SelfishNetv0.Properties.Resources.Network_ConnectTo;
+            this.toolStripButton2.Image = global::SelfishNetv3.Properties.Resources.Network_ConnectTo;
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(36, 36);
@@ -123,7 +123,7 @@ namespace SelfishNetv0
             // toolStripButton3
             // 
             this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = global::SelfishNetv0.Properties.Resources.DisconnectedDrive;
+            this.toolStripButton3.Image = global::SelfishNetv3.Properties.Resources.DisconnectedDrive;
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
             this.toolStripButton3.Size = new System.Drawing.Size(36, 36);
@@ -383,7 +383,7 @@ namespace SelfishNetv0
             // 
             // showToolStripMenuItem
             // 
-            this.showToolStripMenuItem.Image = global::SelfishNetv0.Properties.Resources._167;
+            this.showToolStripMenuItem.Image = global::SelfishNetv3.Properties.Resources._167;
             this.showToolStripMenuItem.Name = "showToolStripMenuItem";
             this.showToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.showToolStripMenuItem.Text = "Show";
@@ -391,7 +391,7 @@ namespace SelfishNetv0
             // 
             // exitToolStripMenuItem
             // 
-            this.exitToolStripMenuItem.Image = global::SelfishNetv0.Properties.Resources._172;
+            this.exitToolStripMenuItem.Image = global::SelfishNetv3.Properties.Resources._172;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.exitToolStripMenuItem.Text = "Exit";
