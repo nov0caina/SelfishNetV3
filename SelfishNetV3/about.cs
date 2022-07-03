@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace SelfishNetv0
+namespace SelfishNetv3
 {
     public partial class about : Form
     {

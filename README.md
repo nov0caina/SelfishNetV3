@@ -8,7 +8,7 @@ New graphic interface.
 Requirements:
 - You need to have WinPcap previously installed.
 - Your Wi-Fi chipset must be compatible with monitor mode.
-- Copy the archives "Computerfont.ttf" and "npf.sys" from the "LIB" folder to "bin\Debug\SelfishNetv0.exe" folder
+- Copy the archives "Computerfont.ttf" and "npf.sys" from the "LIB" folder to "bin\Debug\SelfishNetv3.exe" folder
 
 Current Functions:
 - Mac Spoofing.

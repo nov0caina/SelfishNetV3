@@ -1,4 +1,4 @@
-﻿namespace SelfishNetv0
+﻿namespace SelfishNetv3
 {
     partial class CAdapter
     {
