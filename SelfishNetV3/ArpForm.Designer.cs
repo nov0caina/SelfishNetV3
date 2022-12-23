@@ -41,15 +41,6 @@ namespace SelfishNetv3
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.treeGridView1 = new AdvancedDataGridView.TreeGridView();
-            this.ColPCName = new AdvancedDataGridView.TreeGridColumn();
-            this.ColPCIP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColPCMac = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColDownload = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColUpload = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColDownCap = new DataGridViewNumericUpDownElements.DataGridViewNumericUpDownColumn();
-            this.ColUploadCap = new DataGridViewNumericUpDownElements.DataGridViewNumericUpDownColumn();
-            this.ColBlock = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.ColSpoof = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.ContextMenuViews = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ViewMenuIP = new System.Windows.Forms.ToolStripMenuItem();
             this.ViewMenuMAC = new System.Windows.Forms.ToolStripMenuItem();
@@ -68,6 +59,15 @@ namespace SelfishNetv3
             this.showToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timerDiscovery = new System.Windows.Forms.Timer(this.components);
+            this.ColPCName = new AdvancedDataGridView.TreeGridColumn();
+            this.ColPCIP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColPCMac = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDownload = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColUpload = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDownCap = new DataGridViewNumericUpDownElements.DataGridViewNumericUpDownColumn();
+            this.ColUploadCap = new DataGridViewNumericUpDownElements.DataGridViewNumericUpDownColumn();
+            this.ColBlock = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ColSpoof = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.treeGridView1)).BeginInit();
             this.ContextMenuViews.SuspendLayout();
@@ -172,94 +172,6 @@ namespace SelfishNetv3
             this.treeGridView1.TabIndex = 1;
             this.treeGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.TreeGridView1_CellValueChanged);
             this.treeGridView1.CurrentCellDirtyStateChanged += new System.EventHandler(this.TreeGridView1_CurrentCellDirtyStateChanged);
-            // 
-            // ColPCName
-            // 
-            this.ColPCName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColPCName.DefaultNodeImage = null;
-            this.ColPCName.FillWeight = 200F;
-            this.ColPCName.HeaderText = "PC Name";
-            this.ColPCName.MinimumWidth = 40;
-            this.ColPCName.Name = "ColPCName";
-            this.ColPCName.ReadOnly = true;
-            this.ColPCName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // ColPCIP
-            // 
-            this.ColPCIP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColPCIP.HeaderText = "IP";
-            this.ColPCIP.MinimumWidth = 35;
-            this.ColPCIP.Name = "ColPCIP";
-            this.ColPCIP.ReadOnly = true;
-            this.ColPCIP.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // ColPCMac
-            // 
-            this.ColPCMac.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColPCMac.HeaderText = "Mac";
-            this.ColPCMac.MinimumWidth = 35;
-            this.ColPCMac.Name = "ColPCMac";
-            this.ColPCMac.ReadOnly = true;
-            this.ColPCMac.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // ColDownload
-            // 
-            this.ColDownload.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColDownload.HeaderText = "Download KB/s";
-            this.ColDownload.MinimumWidth = 20;
-            this.ColDownload.Name = "ColDownload";
-            this.ColDownload.ReadOnly = true;
-            this.ColDownload.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // ColUpload
-            // 
-            this.ColUpload.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColUpload.HeaderText = "Upload KB/s";
-            this.ColUpload.MinimumWidth = 20;
-            this.ColUpload.Name = "ColUpload";
-            this.ColUpload.ReadOnly = true;
-            this.ColUpload.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // ColDownCap
-            // 
-            this.ColDownCap.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColDownCap.HeaderText = "DownCap";
-            this.ColDownCap.Maximum = new decimal(new int[] {
-            2000,
-            0,
-            0,
-            0});
-            this.ColDownCap.MinimumWidth = 35;
-            this.ColDownCap.Name = "ColDownCap";
-            this.ColDownCap.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // ColUploadCap
-            // 
-            this.ColUploadCap.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColUploadCap.HeaderText = "UploadCap";
-            this.ColUploadCap.Maximum = new decimal(new int[] {
-            2000,
-            0,
-            0,
-            0});
-            this.ColUploadCap.MinimumWidth = 35;
-            this.ColUploadCap.Name = "ColUploadCap";
-            this.ColUploadCap.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // ColBlock
-            // 
-            this.ColBlock.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColBlock.HeaderText = "Block";
-            this.ColBlock.MinimumWidth = 35;
-            this.ColBlock.Name = "ColBlock";
-            // 
-            // ColSpoof
-            // 
-            this.ColSpoof.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColSpoof.HeaderText = "Spoof";
-            this.ColSpoof.MinimumWidth = 35;
-            this.ColSpoof.Name = "ColSpoof";
-            this.ColSpoof.Visible = false;
             // 
             // ContextMenuViews
             // 
@@ -408,6 +320,94 @@ namespace SelfishNetv3
             // timerDiscovery
             // 
             this.timerDiscovery.Interval = 50;
+            // 
+            // ColPCName
+            // 
+            this.ColPCName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColPCName.DefaultNodeImage = null;
+            this.ColPCName.FillWeight = 200F;
+            this.ColPCName.HeaderText = "PC Name";
+            this.ColPCName.MinimumWidth = 40;
+            this.ColPCName.Name = "ColPCName";
+            this.ColPCName.ReadOnly = true;
+            this.ColPCName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // ColPCIP
+            // 
+            this.ColPCIP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColPCIP.HeaderText = "IP";
+            this.ColPCIP.MinimumWidth = 35;
+            this.ColPCIP.Name = "ColPCIP";
+            this.ColPCIP.ReadOnly = true;
+            this.ColPCIP.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // ColPCMac
+            // 
+            this.ColPCMac.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColPCMac.HeaderText = "Mac";
+            this.ColPCMac.MinimumWidth = 35;
+            this.ColPCMac.Name = "ColPCMac";
+            this.ColPCMac.ReadOnly = true;
+            this.ColPCMac.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // ColDownload
+            // 
+            this.ColDownload.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColDownload.HeaderText = "Download KB/s";
+            this.ColDownload.MinimumWidth = 20;
+            this.ColDownload.Name = "ColDownload";
+            this.ColDownload.ReadOnly = true;
+            this.ColDownload.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // ColUpload
+            // 
+            this.ColUpload.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColUpload.HeaderText = "Upload KB/s";
+            this.ColUpload.MinimumWidth = 20;
+            this.ColUpload.Name = "ColUpload";
+            this.ColUpload.ReadOnly = true;
+            this.ColUpload.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // ColDownCap
+            // 
+            this.ColDownCap.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColDownCap.HeaderText = "DownCap";
+            this.ColDownCap.Maximum = new decimal(new int[] {
+            99999999,
+            0,
+            0,
+            0});
+            this.ColDownCap.MinimumWidth = 35;
+            this.ColDownCap.Name = "ColDownCap";
+            this.ColDownCap.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // ColUploadCap
+            // 
+            this.ColUploadCap.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColUploadCap.HeaderText = "UploadCap";
+            this.ColUploadCap.Maximum = new decimal(new int[] {
+            99999999,
+            0,
+            0,
+            0});
+            this.ColUploadCap.MinimumWidth = 35;
+            this.ColUploadCap.Name = "ColUploadCap";
+            this.ColUploadCap.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // ColBlock
+            // 
+            this.ColBlock.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColBlock.HeaderText = "Block";
+            this.ColBlock.MinimumWidth = 35;
+            this.ColBlock.Name = "ColBlock";
+            // 
+            // ColSpoof
+            // 
+            this.ColSpoof.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColSpoof.HeaderText = "Spoof";
+            this.ColSpoof.MinimumWidth = 35;
+            this.ColSpoof.Name = "ColSpoof";
+            this.ColSpoof.Visible = false;
             // 
             // ArpForm
             // 
