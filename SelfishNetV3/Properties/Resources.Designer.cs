@@ -163,9 +163,9 @@ namespace SelfishNetv3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
-        internal static System.Drawing.Icon SN_3_result {
+        internal static System.Drawing.Icon SN2_result {
             get {
-                object obj = ResourceManager.GetObject("SN_3_result", resourceCulture);
+                object obj = ResourceManager.GetObject("SN2_result", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
             }
         }

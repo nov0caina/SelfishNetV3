@@ -26,7 +26,7 @@ namespace SelfishNetv3
 
         private void CAdapter_Load(object sender, EventArgs e)
         {
-            this.Icon = SelfishNetv3.Properties.Resources.SN_3_result;
+            this.Icon = SelfishNetv3.Properties.Resources.SN2_result;
         }
 
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -79,13 +79,49 @@ namespace SelfishNetv3
 
         private void ButtonCancel_Click(object sender, EventArgs e)
         {
-            if (buttonCancel.Text.CompareTo("Quit") == 0)
+
+
+            if (!ArpForm.systemShutdown)
             {
-                ((IDisposable)ArpForm.instance).Dispose();
-                return;
+
+                System.Windows.Forms.DialogResult result = MessageBox.Show("Are you sure you want to close the App?", "Application Closing!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                switch (result)
+                {
+                    case System.Windows.Forms.DialogResult.OK:
+                        if (WindowState == FormWindowState.Minimized)
+                        {
+                            Show();
+                        }
+                        if (buttonCancel.Text.CompareTo("Quit") == 0)
+                        {
+                            ((IDisposable)ArpForm.instance).Dispose();
+                            return;
+                        }
+                        ArpForm.instance.Enabled = true;
+                        Close();
+                        break;
+                }
+
             }
-            ArpForm.instance.Enabled = true;
-            Close();
+            else
+            {
+                if (buttonCancel.Text.CompareTo("Quit") == 0)
+                {
+                    ((IDisposable)ArpForm.instance).Dispose();
+                    return;
+                }
+                ArpForm.instance.Enabled = true;
+                Close();
+
+            }
+
+
+
+
+
+
+
+
         }
 
         private void ButtonOK_Click(object sender, EventArgs e)
@@ -152,7 +188,7 @@ namespace SelfishNetv3
             }
             MessageBox.Show("No network card with a gateway has been found!");
             ((IDisposable)ArpForm.instance).Dispose();
-            
+
         }
     }
 #pragma warning restore  // Falta el comentario XML para el tipo o miembro visible públicamente

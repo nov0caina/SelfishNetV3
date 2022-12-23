@@ -328,8 +328,8 @@ namespace SelfishNetv3
 
 
             this.Text = "SelfishNet v" + Application.ProductVersion.ToString() + " (Minimum By Abdou.Kouach)";
-            this.Icon = SelfishNetv3.Properties.Resources.SN_3_result;
-            SelfishNetTrayIcon.Icon = SelfishNetv3.Properties.Resources.SN_3_result;
+            this.Icon = SelfishNetv3.Properties.Resources.SN2_result;
+            SelfishNetTrayIcon.Icon = SelfishNetv3.Properties.Resources.SN2_result;
             if ((IntPtr)this.driver.openDeviceDriver((sbyte*)(void*)Marshal.StringToHGlobalAnsi("npf")) == IntPtr.Zero)
             {
                 if (System.IO.File.Exists("license.txt"))
@@ -582,7 +582,7 @@ namespace SelfishNetv3
 
 
         private static int WM_QUERYENDSESSION = 0x11;
-        private static bool systemShutdown = false;
+        public static bool systemShutdown = false;
         protected override void WndProc(ref System.Windows.Forms.Message m)
         {
             if (m.Msg == WM_QUERYENDSESSION)

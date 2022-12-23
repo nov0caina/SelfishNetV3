@@ -56,7 +56,7 @@
     <LangVersion>5</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>bin\Debug\SelfishNetv3.exe\SN2_result.ico</ApplicationIcon>
+    <ApplicationIcon>bin\x86\Release\SN2_result.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
@@ -227,6 +227,7 @@
     <None Include="Resources\fridaynight.png" />
     <None Include="bin\Debug\SelfishNetv3.exe\SN2_result.ico" />
     <None Include="bin\Debug\SelfishNetv3.exe\SN-3_result.ico" />
+    <None Include="bin\x86\Release\SN2_result.ico" />
     <Content Include="nov0caina.ico" />
     <Content Include="this.Ico" />
   </ItemGroup>
