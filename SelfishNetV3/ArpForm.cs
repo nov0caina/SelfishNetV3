@@ -12,17 +12,17 @@ using System.Windows.Forms;
 
 namespace SelfishNetv3
 {
-#pragma warning disable CS1591 // Falta el comentario XML para el tipo o miembro visible públicamente
+#pragma warning disable  // Falta el comentario XML para el tipo o miembro visible públicamente
     public delegate void delegateOnNewPC(PC pc);
 
     public delegate void DelUpdateName(PC pc, string str);
     public partial class ArpForm : Form
     {
-     
+
         public int timerStatCount;
         public Driver driver;
         public PcList pcs;
-        public CArp cArp;    
+        public CArp cArp;
         public CAdapter cAdapter;
         public byte[] routerIP;
         public object[] resolvState;
@@ -48,9 +48,12 @@ namespace SelfishNetv3
             {
                 CAdapter cadapter = new CAdapter();
                 this.cAdapter = cadapter;
-                cadapter.Show((IWin32Window)this);
+                if (!minimized) cadapter.Show((IWin32Window)this);
             }
         }
+        bool first_start;
+        bool minimized;
+
         public void NicIsSelected(NetworkInterface nic)
         {
             this.pcs = new PcList();
@@ -99,19 +102,19 @@ namespace SelfishNetv3
             try
             {
                 str = Dns.EndResolve(re).HostName;
-              if (str == (string)null)
-                str = "noname";
-            object[] objArray = new object[2];
-            this.resolvState = objArray;
-            objArray[0] = (object)asyncState;
-            this.resolvState[1] = (object)str;
-            this.Invoke((Delegate)new DelUpdateName(this.updateTreeViewNameCallBack), this.resolvState);
+                if (str == (string)null)
+                    str = "noname";
+                object[] objArray = new object[2];
+                this.resolvState = objArray;
+                objArray[0] = (object)asyncState;
+                this.resolvState[1] = (object)str;
+                this.Invoke((Delegate)new DelUpdateName(this.updateTreeViewNameCallBack), this.resolvState);
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
-        
+
         }
 
         private void updateTreeViewNameCallBack(PC pc, string str)
@@ -303,6 +306,7 @@ namespace SelfishNetv3
                     return;
                 for (int index = 0; index < 35; ++index)
                     this.cArp.UnSpoof(ipAddress1, new IPAddress(this.cArp.routerIP));
+
             }
             catch (Exception ex)
             {
@@ -312,6 +316,20 @@ namespace SelfishNetv3
 
         private unsafe void ArpForm_Load(object sender, EventArgs e)
         {
+
+            if (args.Length > 1)
+            {
+                if (args[1] == "minimize")
+                {
+                    first_start = true;
+                    minimized = true;
+                }
+            }
+
+
+            this.Text = "SelfishNet v" + Application.ProductVersion.ToString() + " (Minimum By Abdou.Kouach)";
+            this.Icon = SelfishNetv3.Properties.Resources.SN_3_result;
+            SelfishNetTrayIcon.Icon = SelfishNetv3.Properties.Resources.SN_3_result;
             if ((IntPtr)this.driver.openDeviceDriver((sbyte*)(void*)Marshal.StringToHGlobalAnsi("npf")) == IntPtr.Zero)
             {
                 if (System.IO.File.Exists("license.txt"))
@@ -419,7 +437,7 @@ namespace SelfishNetv3
             while (index < this.treeGridView1.Nodes[0].Nodes.Count);
         }
 
-       
+
 
 
         private void ViewMenuIP_CheckStateChanged(object sender, EventArgs e)
@@ -469,35 +487,116 @@ namespace SelfishNetv3
 
         }
 
+        string[] args = Environment.GetCommandLineArgs();
+
         private void SelfishNetTrayIcon_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             Show();
-            this.WindowState = FormWindowState.Normal;                      
+            this.WindowState = FormWindowState.Normal;
         }
 
         private void ArpForm_Resize(object sender, EventArgs e)
         {
-            if (WindowState == FormWindowState.Minimized) Hide();
-            this.SelfishNetTrayIcon.ShowBalloonTip(2000);
+            if (WindowState == FormWindowState.Minimized)
+            {
+                Hide();
+            }
+            else
+            {
+
+                if (first_start)
+                {
+
+                    CAdapter cadapter = new CAdapter();
+                    this.cAdapter = cadapter;
+                    cadapter.Show((IWin32Window)this);
+                    first_start = false;
+                }
+
+
+            }
+            //this.SelfishNetTrayIcon.ShowBalloonTip(2000);
         }
 
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var rs = MessageBox.Show(this, "Quit?", "Quit", MessageBoxButtons.YesNo);
-            if (rs == DialogResult.Yes) Environment.Exit(0);
+            this.Close();
+            //var rs = MessageBox.Show(this, "Quit?", "Quit", MessageBoxButtons.YesNo);
+            //if (rs == DialogResult.Yes) Environment.Exit(0);
         }
 
         private void ShowToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Show();
             this.WindowState = FormWindowState.Normal;
-         
-        }      
+
+        }
 
         private void ToolStripButton7_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Maximized;
         }
+
+
+        private void ArpForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (!systemShutdown)
+            {
+
+                System.Windows.Forms.DialogResult result = MessageBox.Show("Are you sure you want to close the App?", "Application Closing!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                switch (result)
+                {
+                    case System.Windows.Forms.DialogResult.OK:
+                        if (WindowState == FormWindowState.Minimized)
+                        {
+                            Show();
+                        }
+                        ToolStripButton3_Click(toolStripButton3, new EventArgs());
+                        SelfishNetTrayIcon.Dispose();
+                        Environment.Exit(0);
+                        break;
+                }
+                e.Cancel = true;
+            }
+            else
+            {
+                ToolStripButton3_Click(toolStripButton3, new EventArgs());
+                SelfishNetTrayIcon.Dispose();
+                Environment.Exit(0);
+
+            }
+            
+        }
+
+        private void ArpForm_Shown(object sender, EventArgs e)
+        {
+            string[] args = Environment.GetCommandLineArgs();
+            if ((args.Length > 1))
+            {
+                minimized = true;
+                if (args[1] == "minimize") this.WindowState = FormWindowState.Minimized;
+            }
+            Opacity = 100;
+        }
+
+
+
+        private static int WM_QUERYENDSESSION = 0x11;
+        private static bool systemShutdown = false;
+        protected override void WndProc(ref System.Windows.Forms.Message m)
+        {
+            if (m.Msg == WM_QUERYENDSESSION)
+            {
+                //MessageBox.Show("queryendsession: this is a logoff, shutdown, or reboot");
+                systemShutdown = true;
+            }
+
+            // If this is WM_QUERYENDSESSION, the closing event should be  
+            // raised in the base WndProc.  
+            base.WndProc(ref m);
+
+        } //WndProc   
+
+#pragma warning restore  // Falta el comentario XML para el tipo o miembro visible públicamente
     }
-#pragma warning restore CS1591 // Falta el comentario XML para el tipo o miembro visible públicamente
 }

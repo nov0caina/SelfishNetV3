@@ -11,7 +11,7 @@ using System.Linq;
 
 namespace SelfishNetv3
 {
-#pragma warning disable CS1591 // Falta el comentario XML para el tipo o miembro visible públicamente
+#pragma warning disable  // Falta el comentario XML para el tipo o miembro visible pblicamente
     public class CArp : IDisposable
     {
         private bool isListeningArp;
@@ -341,9 +341,9 @@ namespace SelfishNetv3
             while (num2 < 6);
             pcaparp = new CPcapNet();
             pcapredirect = new CPcapNet();
-            arpListenerThreadTerminated = new EventWaitHandle(initialState: false, EventResetMode.AutoReset);
-            redirectorThreadTerminated = new EventWaitHandle(initialState: false, EventResetMode.AutoReset);
-            discovererThreadTerminated = new EventWaitHandle(initialState: false, EventResetMode.AutoReset);
+            arpListenerThreadTerminated = new EventWaitHandle(false,EventResetMode.AutoReset);
+            redirectorThreadTerminated = new EventWaitHandle(false,EventResetMode.AutoReset);
+            discovererThreadTerminated = new EventWaitHandle(false,EventResetMode.AutoReset);
             isListeningArp = false;
             isDiscovering = false;
             isRedirecting = false;
@@ -556,5 +556,5 @@ namespace SelfishNetv3
             GC.SuppressFinalize(this);
         }
     }
-#pragma warning restore CS1591 // Falta el comentario XML para el tipo o miembro visible públicamente
+#pragma warning restore  // Falta el comentario XML para el tipo o miembro visible pï¿½blicamente
 }
