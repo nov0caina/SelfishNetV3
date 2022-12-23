@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 
 namespace SelfishNetv3
 {
-#pragma warning disable CS1591 // Falta el comentario XML para el tipo o miembro visible públicamente
+#pragma warning disable  // Falta el comentario XML para el tipo o miembro visible pï¿½blicamente
     public class tools
 
     {
@@ -53,5 +53,5 @@ namespace SelfishNetv3
             return false;
         }
     }
-#pragma warning restore CS1591 // Falta el comentario XML para el tipo o miembro visible públicamente
+#pragma warning restore  // Falta el comentario XML para el tipo o miembro visible pï¿½blicamente
 }

@@ -156,7 +156,6 @@ namespace SelfishNetv3
             this.ColBlock,
             this.ColSpoof});
             this.treeGridView1.ContextMenuStrip = this.ContextMenuViews;
-            this.treeGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.treeGridView1.ImageList = this.imageList1;
             this.treeGridView1.Location = new System.Drawing.Point(0, 39);
@@ -169,7 +168,7 @@ namespace SelfishNetv3
             this.treeGridView1.ShowCellToolTips = false;
             this.treeGridView1.ShowEditingIcon = false;
             this.treeGridView1.ShowRowErrors = false;
-            this.treeGridView1.Size = new System.Drawing.Size(685, 525);
+            this.treeGridView1.Size = new System.Drawing.Size(685, 351);
             this.treeGridView1.TabIndex = 1;
             this.treeGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.TreeGridView1_CellValueChanged);
             this.treeGridView1.CurrentCellDirtyStateChanged += new System.EventHandler(this.TreeGridView1_CurrentCellDirtyStateChanged);
@@ -225,6 +224,11 @@ namespace SelfishNetv3
             // 
             this.ColDownCap.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ColDownCap.HeaderText = "DownCap";
+            this.ColDownCap.Maximum = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
             this.ColDownCap.MinimumWidth = 35;
             this.ColDownCap.Name = "ColDownCap";
             this.ColDownCap.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -233,6 +237,11 @@ namespace SelfishNetv3
             // 
             this.ColUploadCap.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ColUploadCap.HeaderText = "UploadCap";
+            this.ColUploadCap.Maximum = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
             this.ColUploadCap.MinimumWidth = 35;
             this.ColUploadCap.Name = "ColUploadCap";
             this.ColUploadCap.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -368,8 +377,7 @@ namespace SelfishNetv3
             this.SelfishNetTrayIcon.BalloonTipText = "SelfishNet is minimized";
             this.SelfishNetTrayIcon.BalloonTipTitle = "\"SelfishNet\"";
             this.SelfishNetTrayIcon.ContextMenuStrip = this.SelfishNetTray;
-            this.SelfishNetTrayIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("SelfishNetTrayIcon.Icon")));
-            this.SelfishNetTrayIcon.Text = "notifyIcon1";
+            this.SelfishNetTrayIcon.Text = "SelfishNet v3";
             this.SelfishNetTrayIcon.Visible = true;
             this.SelfishNetTrayIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.SelfishNetTrayIcon_MouseDoubleClick);
             // 
@@ -405,15 +413,18 @@ namespace SelfishNetv3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(685, 564);
-            this.ControlBox = false;
+            this.ClientSize = new System.Drawing.Size(685, 390);
             this.Controls.Add(this.treeGridView1);
             this.Controls.Add(this.toolStrip1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ArpForm";
-            this.Text = "SelfishNet v3";
+            this.Opacity = 0D;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "SelfishNet v3 (Minimum By Abdou.Kouach)";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ArpForm_FormClosing);
             this.Load += new System.EventHandler(this.ArpForm_Load);
+            this.Shown += new System.EventHandler(this.ArpForm_Shown);
             this.Resize += new System.EventHandler(this.ArpForm_Resize);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -452,6 +463,7 @@ namespace SelfishNetv3
         private System.Windows.Forms.ContextMenuStrip SelfishNetTray;
         private System.Windows.Forms.ToolStripMenuItem showToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private TreeGridColumn ColPCName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColPCIP;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColPCMac;
@@ -461,7 +473,6 @@ namespace SelfishNetv3
         private DataGridViewNumericUpDownElements.DataGridViewNumericUpDownColumn ColUploadCap;
         private System.Windows.Forms.DataGridViewCheckBoxColumn ColBlock;
         private System.Windows.Forms.DataGridViewCheckBoxColumn ColSpoof;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
     }
 }
 
