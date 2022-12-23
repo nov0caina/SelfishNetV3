@@ -56,7 +56,7 @@
     <LangVersion>5</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>bin\x86\Release\SN2_result.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\SN2_result.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
@@ -229,6 +229,7 @@
     <None Include="bin\Debug\SelfishNetv3.exe\SN-3_result.ico" />
     <None Include="bin\x86\Release\SN2_result.ico" />
     <Content Include="nov0caina.ico" />
+    <None Include="Resources\SN2_result.ico" />
     <Content Include="this.Ico" />
   </ItemGroup>
   <ItemGroup>
