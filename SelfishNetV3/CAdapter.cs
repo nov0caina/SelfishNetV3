@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace SelfishNetv3
 {
-#pragma warning disable CS1591 // Falta el comentario XML para el tipo o miembro visible públicamente
+#pragma warning disable  // Falta el comentario XML para el tipo o miembro visible públicamente
     public partial class CAdapter : Form
     {
         private NetworkInterface[] nics;
@@ -26,7 +26,7 @@ namespace SelfishNetv3
 
         private void CAdapter_Load(object sender, EventArgs e)
         {
-
+            this.Icon = SelfishNetv3.Properties.Resources.SN2_result;
         }
 
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -79,13 +79,49 @@ namespace SelfishNetv3
 
         private void ButtonCancel_Click(object sender, EventArgs e)
         {
-            if (buttonCancel.Text.CompareTo("Quit") == 0)
+
+
+            if (!ArpForm.systemShutdown)
             {
-                ((IDisposable)ArpForm.instance)?.Dispose();
-                return;
+
+                System.Windows.Forms.DialogResult result = MessageBox.Show("Are you sure you want to close the App?", "Application Closing!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                switch (result)
+                {
+                    case System.Windows.Forms.DialogResult.OK:
+                        if (WindowState == FormWindowState.Minimized)
+                        {
+                            Show();
+                        }
+                        if (buttonCancel.Text.CompareTo("Quit") == 0)
+                        {
+                            ((IDisposable)ArpForm.instance).Dispose();
+                            return;
+                        }
+                        ArpForm.instance.Enabled = true;
+                        Close();
+                        break;
+                }
+
             }
-            ArpForm.instance.Enabled = true;
-            Close();
+            else
+            {
+                if (buttonCancel.Text.CompareTo("Quit") == 0)
+                {
+                    ((IDisposable)ArpForm.instance).Dispose();
+                    return;
+                }
+                ArpForm.instance.Enabled = true;
+                Close();
+
+            }
+
+
+
+
+
+
+
+
         }
 
         private void ButtonOK_Click(object sender, EventArgs e)
@@ -99,6 +135,7 @@ namespace SelfishNetv3
 
         private void CAdapter_Shown(object sender, EventArgs e)
         {
+            Opacity = 100;
             ArpForm.instance.Enabled = false;
             (nicsEnum = nics.GetEnumerator()).MoveNext();
             if (((NetworkInterface)nicsEnum.Current).GetIPProperties().GetIPv4Properties().IsForwardingEnabled)
@@ -138,7 +175,7 @@ namespace SelfishNetv3
                             num++;
                             continue;
                         }
-                        comboBox1.SelectedIndex = num;
+                        comboBox1.SelectedIndex = comboBox1.Items.Count - 1;
                         return;
                     }
                     while (nicsEnum.MoveNext());
@@ -150,8 +187,9 @@ namespace SelfishNetv3
                 return;
             }
             MessageBox.Show("No network card with a gateway has been found!");
-            ((IDisposable)ArpForm.instance)?.Dispose();
+            ((IDisposable)ArpForm.instance).Dispose();
+
         }
     }
-#pragma warning restore CS1591 // Falta el comentario XML para el tipo o miembro visible públicamente
+#pragma warning restore  // Falta el comentario XML para el tipo o miembro visible públicamente
 }
