@@ -5,7 +5,7 @@ using System.Threading;
 
 namespace SelfishNetv3
 {
-#pragma warning disable CS1591 // Falta el comentario XML para el tipo o miembro visible públicamente
+#pragma warning disable  // Falta el comentario XML para el tipo o miembro visible pblicamente
     public class PcList : IDisposable
 
     {
@@ -35,7 +35,7 @@ namespace SelfishNetv3
                 }
             }
             ArrayList.Synchronized(pclist).Add(pc);
-            delOnNewPC?.Invoke(pc);
+            delOnNewPC.Invoke(pc);
             Monitor.Exit(pclist.SyncRoot);
             return true;
         }
@@ -48,7 +48,7 @@ namespace SelfishNetv3
             {
                 if (item.ip.ToString().CompareTo(pc.ip.ToString()) == 0)
                 {
-                    delOnPCRemove?.Invoke(pc);
+                    delOnPCRemove.Invoke(pc);
                     pclist.Remove(pc);
                     Monitor.Exit(pclist.SyncRoot);
                     return true;
@@ -172,5 +172,5 @@ namespace SelfishNetv3
             GC.SuppressFinalize(this);
         }
     }
-#pragma warning restore CS1591 // Falta el comentario XML para el tipo o miembro visible públicamente
+#pragma warning restore  // Falta el comentario XML para el tipo o miembro visible pï¿½blicamente
 }
