@@ -101,7 +101,7 @@ namespace SelfishNetv3
 
             if (confirmarSalida == DialogResult.Yes)
             {
-                ArpForm.instance?.Dispose();
+                ArpForm.instance.Dispose();
                 Environment.Exit(0);
             }
         }

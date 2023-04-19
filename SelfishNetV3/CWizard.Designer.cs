@@ -1,6 +1,6 @@
 ﻿namespace SelfishNetv3
 {
-#pragma warning disable CS1591 // Falta el comentario XML para el tipo o miembro visible públicamente
+#pragma warning disable  // Falta el comentario XML para el tipo o miembro visible públicamente
     partial class CWizard
 
     {
@@ -118,5 +118,5 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Button button1;
     }
-#pragma warning restore CS1591 // Falta el comentario XML para el tipo o miembro visible públicamente
+#pragma warning restore  // Falta el comentario XML para el tipo o miembro visible públicamente
 }
