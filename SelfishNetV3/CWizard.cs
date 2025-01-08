@@ -23,7 +23,7 @@ namespace SelfishNetv3
         {
             if (button1.Text.CompareTo("Quit") == 0)
             {
-                ((IDisposable)ArpForm.instance)?.Dispose();
+                ((IDisposable)ArpForm.instance).Dispose();
             }
             else
             {
@@ -48,5 +48,5 @@ namespace SelfishNetv3
             }
         }
     }
-#pragma warning restore CS1591 // Falta el comentario XML para el tipo o miembro visible públicamente
+#pragma warning restore  // Falta el comentario XML para el tipo o miembro visible públicamente
 }
