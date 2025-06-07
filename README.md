@@ -1,4 +1,3 @@
-```markdown
 # macOS SelfishNet-like Prototypes
 
 ## Introduction
@@ -106,4 +105,3 @@ For a more feature-rich and performant tool, development would typically involve
 *   Developing a native macOS GUI.
 *   Implementing more sophisticated bandwidth shaping algorithms.
 *   Adding features like MAC address database, hostname resolution, etc.
-```
