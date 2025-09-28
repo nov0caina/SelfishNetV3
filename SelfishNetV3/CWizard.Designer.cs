@@ -40,18 +40,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(195, 8);
+            this.label1.Location = new System.Drawing.Point(292, 12);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.Size = new System.Drawing.Size(72, 20);
             this.label1.TabIndex = 7;
             this.label1.Text = "Licenses";
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(7, 24);
+            this.richTextBox1.Location = new System.Drawing.Point(10, 37);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(439, 279);
+            this.richTextBox1.Size = new System.Drawing.Size(656, 427);
             this.richTextBox1.TabIndex = 6;
             this.richTextBox1.Text = "this app use wpcap\\n Do u agree to use their driver";
             // 
@@ -59,9 +61,10 @@
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Checked = true;
-            this.radioButton2.Location = new System.Drawing.Point(7, 334);
+            this.radioButton2.Location = new System.Drawing.Point(10, 514);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(91, 17);
+            this.radioButton2.Size = new System.Drawing.Size(133, 24);
             this.radioButton2.TabIndex = 10;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "I do not agree";
@@ -70,20 +73,22 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(7, 311);
+            this.radioButton1.Location = new System.Drawing.Point(10, 478);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(154, 17);
+            this.radioButton1.Size = new System.Drawing.Size(201, 24);
             this.radioButton1.TabIndex = 9;
             this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "I agree, install me the driver";
+            this.radioButton1.Text = "I agree, install the driver";
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.RadioButton1_CheckedChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(377, 349);
+            this.button1.Location = new System.Drawing.Point(566, 537);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(69, 29);
+            this.button1.Size = new System.Drawing.Size(104, 45);
             this.button1.TabIndex = 8;
             this.button1.Text = "Quit";
             this.button1.UseVisualStyleBackColor = true;
@@ -91,9 +96,9 @@
             // 
             // CWizard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(452, 387);
+            this.ClientSize = new System.Drawing.Size(678, 595);
             this.ControlBox = false;
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
@@ -101,6 +106,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.richTextBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "CWizard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Wizard";

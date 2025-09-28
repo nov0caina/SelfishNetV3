@@ -327,9 +327,9 @@ namespace SelfishNetv3
             }
 
 
-            this.Text = "SelfishNet v" + Application.ProductVersion.ToString() + " (Minimum By Abdou.Kouach)";
-            this.Icon = SelfishNetv3.Properties.Resources.SN2_result;
-            SelfishNetTrayIcon.Icon = SelfishNetv3.Properties.Resources.SN2_result;
+            this.Text = "SelfishNet v" + Application.ProductVersion.ToString();
+            //this.Icon = SelfishNetv3.Properties.Resources.nov0caina_icon;
+            //SelfishNetTrayIcon.Icon = SelfishNetv3.Properties.Resources.nov0caina_icon.ico;
             if ((IntPtr)this.driver.openDeviceDriver((sbyte*)(void*)Marshal.StringToHGlobalAnsi("npf")) == IntPtr.Zero)
             {
                 if (System.IO.File.Exists("license.txt"))

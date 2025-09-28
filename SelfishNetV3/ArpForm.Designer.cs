@@ -31,7 +31,7 @@ namespace SelfishNetv3
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            AdvancedDataGridView.TreeGridNode treeGridNode1 = new AdvancedDataGridView.TreeGridNode();
+            AdvancedDataGridView.TreeGridNode treeGridNode2 = new AdvancedDataGridView.TreeGridNode();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ArpForm));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
@@ -86,7 +86,8 @@ namespace SelfishNetv3
             this.toolStripSeparator3});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(685, 39);
+            this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.toolStrip1.Size = new System.Drawing.Size(1028, 41);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -103,7 +104,7 @@ namespace SelfishNetv3
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 39);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 41);
             // 
             // toolStripButton2
             // 
@@ -118,7 +119,7 @@ namespace SelfishNetv3
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 39);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 41);
             // 
             // toolStripButton3
             // 
@@ -133,7 +134,7 @@ namespace SelfishNetv3
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 39);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 41);
             // 
             // treeGridView1
             // 
@@ -161,17 +162,19 @@ namespace SelfishNetv3
             this.treeGridView1.ContextMenuStrip = this.ContextMenuViews;
             this.treeGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.treeGridView1.ImageList = this.imageList1;
-            this.treeGridView1.Location = new System.Drawing.Point(0, 39);
+            this.treeGridView1.Location = new System.Drawing.Point(0, 60);
+            this.treeGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.treeGridView1.Name = "treeGridView1";
-            treeGridNode1.Height = 20;
-            treeGridNode1.ImageIndex = 0;
-            this.treeGridView1.Nodes.Add(treeGridNode1);
+            treeGridNode2.Height = 27;
+            treeGridNode2.ImageIndex = 0;
+            this.treeGridView1.Nodes.Add(treeGridNode2);
             this.treeGridView1.RowHeadersVisible = false;
+            this.treeGridView1.RowHeadersWidth = 62;
             this.treeGridView1.ShowCellErrors = false;
             this.treeGridView1.ShowCellToolTips = false;
             this.treeGridView1.ShowEditingIcon = false;
             this.treeGridView1.ShowRowErrors = false;
-            this.treeGridView1.Size = new System.Drawing.Size(685, 351);
+            this.treeGridView1.Size = new System.Drawing.Size(1028, 540);
             this.treeGridView1.TabIndex = 1;
             this.treeGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.TreeGridView1_CellValueChanged);
             this.treeGridView1.CurrentCellDirtyStateChanged += new System.EventHandler(this.TreeGridView1_CurrentCellDirtyStateChanged);
@@ -266,6 +269,7 @@ namespace SelfishNetv3
             // 
             // ContextMenuViews
             // 
+            this.ContextMenuViews.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.ContextMenuViews.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ViewMenuIP,
             this.ViewMenuMAC,
@@ -276,7 +280,7 @@ namespace SelfishNetv3
             this.ViewMenuBlock,
             this.ViewMenuSpoof});
             this.ContextMenuViews.Name = "ContextMenuViews";
-            this.ContextMenuViews.Size = new System.Drawing.Size(178, 180);
+            this.ContextMenuViews.Size = new System.Drawing.Size(239, 260);
             // 
             // ViewMenuIP
             // 
@@ -284,7 +288,7 @@ namespace SelfishNetv3
             this.ViewMenuIP.CheckOnClick = true;
             this.ViewMenuIP.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ViewMenuIP.Name = "ViewMenuIP";
-            this.ViewMenuIP.Size = new System.Drawing.Size(177, 22);
+            this.ViewMenuIP.Size = new System.Drawing.Size(238, 32);
             this.ViewMenuIP.Text = "IP";
             this.ViewMenuIP.CheckStateChanged += new System.EventHandler(this.ViewMenuIP_CheckStateChanged);
             // 
@@ -294,7 +298,7 @@ namespace SelfishNetv3
             this.ViewMenuMAC.CheckOnClick = true;
             this.ViewMenuMAC.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ViewMenuMAC.Name = "ViewMenuMAC";
-            this.ViewMenuMAC.Size = new System.Drawing.Size(177, 22);
+            this.ViewMenuMAC.Size = new System.Drawing.Size(238, 32);
             this.ViewMenuMAC.Text = "Mac Address";
             this.ViewMenuMAC.CheckStateChanged += new System.EventHandler(this.ViewMenuMAC_CheckStateChanged);
             // 
@@ -304,7 +308,7 @@ namespace SelfishNetv3
             this.ViewMenuDownload.CheckOnClick = true;
             this.ViewMenuDownload.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ViewMenuDownload.Name = "ViewMenuDownload";
-            this.ViewMenuDownload.Size = new System.Drawing.Size(177, 22);
+            this.ViewMenuDownload.Size = new System.Drawing.Size(238, 32);
             this.ViewMenuDownload.Text = "Download";
             this.ViewMenuDownload.CheckStateChanged += new System.EventHandler(this.ViewMenuDownload_CheckStateChanged);
             // 
@@ -314,7 +318,7 @@ namespace SelfishNetv3
             this.ViewMenuUpload.CheckOnClick = true;
             this.ViewMenuUpload.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ViewMenuUpload.Name = "ViewMenuUpload";
-            this.ViewMenuUpload.Size = new System.Drawing.Size(177, 22);
+            this.ViewMenuUpload.Size = new System.Drawing.Size(238, 32);
             this.ViewMenuUpload.Text = "Upload";
             this.ViewMenuUpload.CheckStateChanged += new System.EventHandler(this.ViewMenuUpload_CheckStateChanged);
             // 
@@ -324,7 +328,7 @@ namespace SelfishNetv3
             this.ViewMenuDownloadCap.CheckOnClick = true;
             this.ViewMenuDownloadCap.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ViewMenuDownloadCap.Name = "ViewMenuDownloadCap";
-            this.ViewMenuDownloadCap.Size = new System.Drawing.Size(177, 22);
+            this.ViewMenuDownloadCap.Size = new System.Drawing.Size(238, 32);
             this.ViewMenuDownloadCap.Text = "Download Capacity";
             this.ViewMenuDownloadCap.CheckStateChanged += new System.EventHandler(this.ViewMenuDownloadCap_CheckStateChanged);
             // 
@@ -334,7 +338,7 @@ namespace SelfishNetv3
             this.ViewMenuUploadCap.CheckOnClick = true;
             this.ViewMenuUploadCap.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ViewMenuUploadCap.Name = "ViewMenuUploadCap";
-            this.ViewMenuUploadCap.Size = new System.Drawing.Size(177, 22);
+            this.ViewMenuUploadCap.Size = new System.Drawing.Size(238, 32);
             this.ViewMenuUploadCap.Text = "Upload Capacity";
             this.ViewMenuUploadCap.CheckStateChanged += new System.EventHandler(this.ViewMenuUploadCap_CheckStateChanged);
             // 
@@ -344,7 +348,7 @@ namespace SelfishNetv3
             this.ViewMenuBlock.CheckOnClick = true;
             this.ViewMenuBlock.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ViewMenuBlock.Name = "ViewMenuBlock";
-            this.ViewMenuBlock.Size = new System.Drawing.Size(177, 22);
+            this.ViewMenuBlock.Size = new System.Drawing.Size(238, 32);
             this.ViewMenuBlock.Text = "Block";
             this.ViewMenuBlock.CheckStateChanged += new System.EventHandler(this.ViewMenuBlock_CheckStateChanged);
             // 
@@ -352,7 +356,7 @@ namespace SelfishNetv3
             // 
             this.ViewMenuSpoof.CheckOnClick = true;
             this.ViewMenuSpoof.Name = "ViewMenuSpoof";
-            this.ViewMenuSpoof.Size = new System.Drawing.Size(177, 22);
+            this.ViewMenuSpoof.Size = new System.Drawing.Size(238, 32);
             this.ViewMenuSpoof.Text = "Spoof";
             this.ViewMenuSpoof.CheckStateChanged += new System.EventHandler(this.ViewMenuSpoof_CheckStateChanged);
             // 
@@ -386,17 +390,18 @@ namespace SelfishNetv3
             // 
             // SelfishNetTray
             // 
+            this.SelfishNetTray.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.SelfishNetTray.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.SelfishNetTray.Name = "SelfishNetTray";
-            this.SelfishNetTray.Size = new System.Drawing.Size(104, 48);
+            this.SelfishNetTray.Size = new System.Drawing.Size(137, 68);
             // 
             // showToolStripMenuItem
             // 
             this.showToolStripMenuItem.Image = global::SelfishNetv3.Properties.Resources._167;
             this.showToolStripMenuItem.Name = "showToolStripMenuItem";
-            this.showToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.showToolStripMenuItem.Size = new System.Drawing.Size(136, 32);
             this.showToolStripMenuItem.Text = "Show";
             this.showToolStripMenuItem.Click += new System.EventHandler(this.ShowToolStripMenuItem_Click);
             // 
@@ -404,7 +409,7 @@ namespace SelfishNetv3
             // 
             this.exitToolStripMenuItem.Image = global::SelfishNetv3.Properties.Resources._172;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(136, 32);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
@@ -414,17 +419,19 @@ namespace SelfishNetv3
             // 
             // ArpForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(685, 390);
+            this.ClientSize = new System.Drawing.Size(1028, 600);
             this.Controls.Add(this.treeGridView1);
             this.Controls.Add(this.toolStrip1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ArpForm";
             this.Opacity = 0D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SelfishNet v3 (Minimum By Abdou.Kouach)";
+            this.Text = "SelfishNet v3.0.1 ";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ArpForm_FormClosing);
             this.Load += new System.EventHandler(this.ArpForm_Load);
             this.Shown += new System.EventHandler(this.ArpForm_Shown);
