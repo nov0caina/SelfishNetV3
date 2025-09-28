@@ -24,11 +24,6 @@ namespace SelfishNetv3
             buttonCancel.Text = "Quit";
         }
 
-        private void CAdapter_Load(object sender, EventArgs e)
-        {
-            this.Icon = SelfishNetv3.Properties.Resources.SN2_result;
-        }
-
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (!(nicsEnum = nics.GetEnumerator()).MoveNext())

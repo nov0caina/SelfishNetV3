@@ -3,7 +3,7 @@
 "VSVersion" = "3:800"
 "ProjectType" = "8:{978C614F-708E-4E1A-B201-565925725DBA}"
 "IsWebType" = "8:FALSE"
-"ProjectName" = "8:SelfishNetV3Setup"
+"ProjectName" = "8:SelfishNetSetup"
 "LanguageId" = "3:1033"
 "CodePage" = "3:1252"
 "UILanguageId" = "3:1033"
@@ -15,19 +15,13 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_071C01F6645CBA45FAD7BB709E68A79C"
+        "MsmKey" = "8:_061FE62F24ACC0CB2691749FAF8A5D0F"
         "OwnerKey" = "8:_875228D111A74BBE96C30BA52374F60B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_13439EFF8D4E478599D5F681FF134F9D"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_15E5A55123484C2D84FB765DA5265942"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -45,7 +39,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_5354D045A8B23AD1E5023B53C73F61AE"
+        "MsmKey" = "8:_35BC3541E4B57A7E6D633BB136B4FDB3"
+        "OwnerKey" = "8:_875228D111A74BBE96C30BA52374F60B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_6814107FFE84A3BAB8E732CE5AD1C7EE"
         "OwnerKey" = "8:_875228D111A74BBE96C30BA52374F60B"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -57,12 +57,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_BA5C6BDF5CE1073C8FFB5DE6112B453A"
-        "OwnerKey" = "8:_875228D111A74BBE96C30BA52374F60B"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_875228D111A74BBE96C30BA52374F60B"
         "MsmSig" = "8:_UNDEFINED"
@@ -70,19 +64,19 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_BA5C6BDF5CE1073C8FFB5DE6112B453A"
+        "OwnerKey" = "8:_061FE62F24ACC0CB2691749FAF8A5D0F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_5354D045A8B23AD1E5023B53C73F61AE"
+        "OwnerKey" = "8:_35BC3541E4B57A7E6D633BB136B4FDB3"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_071C01F6645CBA45FAD7BB709E68A79C"
+        "OwnerKey" = "8:_6814107FFE84A3BAB8E732CE5AD1C7EE"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -180,20 +174,20 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_071C01F6645CBA45FAD7BB709E68A79C"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_061FE62F24ACC0CB2691749FAF8A5D0F"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:DataGridViewNumericUpDownElements, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:PcapNet, Version=1.0.2632.24367, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
-                    "_071C01F6645CBA45FAD7BB709E68A79C"
+                    "_061FE62F24ACC0CB2691749FAF8A5D0F"
                     {
-                    "Name" = "8:DataGridViewNumericUpDownElements.dll"
+                    "Name" = "8:PcapNet.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:DataGridViewNumericUpDownElements.dll"
+            "SourcePath" = "8:PcapNet.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_6DE52B94EB6F4A749B2D7E4CD490CBF0"
@@ -215,26 +209,6 @@
             {
             "SourcePath" = "8:..\\LIB\\npf.sys"
             "TargetName" = "8:npf.sys"
-            "Tag" = "8:"
-            "Folder" = "8:_6DE52B94EB6F4A749B2D7E4CD490CBF0"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_15E5A55123484C2D84FB765DA5265942"
-            {
-            "SourcePath" = "8:..\\LIB\\Computerfont.ttf"
-            "TargetName" = "8:Computerfont.ttf"
             "Tag" = "8:"
             "Folder" = "8:_6DE52B94EB6F4A749B2D7E4CD490CBF0"
             "Condition" = "8:"
@@ -291,14 +265,14 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_5354D045A8B23AD1E5023B53C73F61AE"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_35BC3541E4B57A7E6D633BB136B4FDB3"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:ExpandableGridView, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_5354D045A8B23AD1E5023B53C73F61AE"
+                    "_35BC3541E4B57A7E6D633BB136B4FDB3"
                     {
                     "Name" = "8:ExpandableGridView.dll"
                     "Attributes" = "3:512"
@@ -322,20 +296,20 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_BA5C6BDF5CE1073C8FFB5DE6112B453A"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_6814107FFE84A3BAB8E732CE5AD1C7EE"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:PcapNet, Version=1.0.2632.24367, Culture=neutral, processorArchitecture=x86"
+            "AssemblyAsmDisplayName" = "8:DataGridViewNumericUpDownElements, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_BA5C6BDF5CE1073C8FFB5DE6112B453A"
+                    "_6814107FFE84A3BAB8E732CE5AD1C7EE"
                     {
-                    "Name" = "8:PcapNet.dll"
+                    "Name" = "8:DataGridViewNumericUpDownElements.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:PcapNet.dll"
+            "SourcePath" = "8:DataGridViewNumericUpDownElements.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_6DE52B94EB6F4A749B2D7E4CD490CBF0"
@@ -420,19 +394,19 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SelfishNetV3"
-        "ProductCode" = "8:{13B38752-ABCE-4C62-A6DE-A902212A48B7}"
-        "PackageCode" = "8:{37F4B28D-6687-4483-BC7F-DB82EECD5B3F}"
+        "ProductCode" = "8:{4093B773-6304-4001-81FC-3385F16FB05A}"
+        "PackageCode" = "8:{5A329F42-170F-46AA-8E1C-DC5171B43F4C}"
         "UpgradeCode" = "8:{70BDE241-A08D-45A8-8169-4C147485F78B}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:3.0.0"
+        "ProductVersion" = "8:3.0.1"
         "Manufacturer" = "8:nov0caina"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:SelfishNetV3"
+        "Title" = "8:SelfishNet"
         "Subject" = "8:"
         "ARPCONTACT" = "8:nov0caina"
         "Keywords" = "8:"
@@ -956,7 +930,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_875228D111A74BBE96C30BA52374F60B"
             {
-            "SourcePath" = "8:..\\SelfishNetV3\\obj\\x86\\Debug\\SelfishNetv3.exe"
+            "SourcePath" = "8:..\\SelfishNetV3\\obj\\Debug\\SelfishNetv3.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_6DE52B94EB6F4A749B2D7E4CD490CBF0"
